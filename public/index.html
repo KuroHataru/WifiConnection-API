@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conexión Wi-Fi</title>
+</head>
+
+<body>
+
+  <button onclick="scanNetworks()">Escanear Redes</button>
+  <br>
+  <label for="networks">Redes disponibles:</label><br>
+  <select id="networks"></select><br />
+
+  <label for="password">Contraseña:</label><br />
+  <input type="password" id="password" placeholder="Ingresa la contraseña" /><br />
+
+  <button onclick="connect()">🔗 Conectar</button>
+
+  <div id="message"></div>
+
+  <script>
+    async function scanNetworks() {
+      const select = document.getElementById("networks");
+      const message = document.getElementById("message");
+      select.innerHTML = "";
+      message.textContent = "Buscando redes...";
+
+      try {
+        const res = await fetch("http://localhost:8000/networks");
+        const data = await res.json();
+
+        if (data.networks && data.networks.length > 0) {
+          data.networks.forEach(ssid => {
+            const option = document.createElement("option");
+            option.value = ssid;
+            option.textContent = ssid;
+            select.appendChild(option);
+          });
+          message.textContent = "Redes encontradas.";
+        } else {
+          message.textContent = data.message || "No se encontraron redes.";
+        }
+      } catch (err) {
+        message.textContent = "Error al escanear redes.";
+        console.error(err);
+      }
+    }
+
+    async function connect() {
+      const ssid = document.getElementById("networks").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (!ssid || !password) {
+        message.textContent = "Selecciona una red e ingresa la contraseña.";
+        return;
+      }
+
+      message.textContent = "Conectando...";
+
+      try {
+        const res = await fetch("http://localhost:8000/connect", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ssid, password })
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          message.textContent = data.message;
+        } else {
+          message.textContent = data.detail || "Error al conectar.";
+        }
+      } catch (err) {
+        message.textContent = "Error de conexión con el servidor.";
+        console.error(err);
+      }
+    }
+  </script>
+</body>
+
+</html>
